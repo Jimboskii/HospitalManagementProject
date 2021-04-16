@@ -1,0 +1,74 @@
+<div class="col-md-7; text-align: center">
+    <div class>
+        <p style = "font-size: 20px; text-align: center;">Inserting Drug</p>
+     <!--  
+       <img
+        id="profile-img"
+        src="src/assets/images/logo.png"
+        class="profile-img-card" 
+      />-->
+      
+      <form
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+  
+  
+  
+      <div class="form-group">
+        <label for="id">Drug id</label>
+        <input
+          type="text"
+          class="form-control"
+          name="id"
+          [(ngModel)]="form.id"
+          #id="ngModel"
+        />
+      </div>
+      <div class="form-group">
+        <label for="drugName">Drug Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="drugName"
+          [(ngModel)]="form.drugName"
+          #id="ngModel"
+        />
+      </div>
+
+
+        <div class="form-group">
+        <label for="drugType">Drug Type</label>
+        <input
+            type="text"
+            class="form-control"
+            name="drugType"
+            [(ngModel)]="form.drugType"
+            #id="ngModel"
+        />
+        </div>
+
+        <div class="form-group">
+            <label for="drugDesc">Drug Description</label>
+            <input
+                type="text"
+                class="form-control"
+                name="drugDesc"
+                [(ngModel)]="form.drugDesc"
+                #id="ngModel"
+            />
+        </div>
+  
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Register</button>
+        </div>
+  
+        
+      </form>
+  
+      
+    </div>
+  </div>

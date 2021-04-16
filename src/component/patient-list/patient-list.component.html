@@ -1,0 +1,29 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <table class = "table table-hover">
+                <thead class = "thead-dark">
+                    <tr>
+                        <th>Patient Id</th>
+                        <th>Patient Name</th>
+                        <th>Dept Name</th>
+                        <th>Admitted</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let x of patient">
+                        <td>{{ x.patientId}}</td>
+                        <td>{{ x.patientName}}</td>
+                        <td>{{ x.deptName}}</td>
+                        <td>{{ x.admitted}}</td>
+                        <td><p *ngFor="let u of x.usage">{{ u.drugName}}</p></td>
+                    </tr>
+                </tbody>
+                </table>
+        </div>
+        </div>
+</div>
+
+

@@ -1,0 +1,24 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <table class = "table table-hover">
+                <thead class = "thead-dark">
+                    <tr>
+                        <th>Pharm Entry Id</th>
+                        <th>Description</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let x of pharmEntry">
+                        <td>{{ x.id}}</td>
+                        <td>{{ x.description}}</td>
+                    </tr>
+                </tbody>
+                </table>
+        </div>
+        </div>
+</div>
+
+

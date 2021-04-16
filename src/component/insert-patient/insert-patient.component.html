@@ -1,0 +1,90 @@
+<div class="col-md-7; text-align: center">
+    <div class>
+        <p style = "font-size: 20px; text-align: center;">Inserting Patient</p>
+     <!--  
+       <img
+        id="profile-img"
+        src="src/assets/images/logo.png"
+        class="profile-img-card" 
+      />-->
+      
+      <form
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+  
+  
+  
+      <div class="form-group">
+        <label for="patientId">Patient Id</label>
+        <input
+          type="text"
+          class="form-control"
+          name="patientId"
+          [(ngModel)]="form.patientId"
+          #patientId="ngModel"
+        />
+      </div>
+      
+        <div class="form-group">
+          <label for="patientName">Patient Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="patientName"
+            [(ngModel)]="form.patientName"
+            #patientName="ngModel"
+          />
+        </div>
+
+
+        <div class="form-group">
+            <label for="deptName">Department Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="deptName"
+              [(ngModel)]="form.deptName"
+              #deptName="ngModel"
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="admitted">Admittance</label>
+            <input
+              type="text"
+              class="form-control"
+              name="admitted"
+              [(ngModel)]="form.admitted"
+              #admitted="ngModel"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="usage">Drugs Used Based on Drug ID</label>
+            <input
+              type="text"
+              class="form-control"
+              name="usage"
+              [(ngModel)]="form.usage"
+              #usage="ngModel"
+            />
+          </div>
+  
+  
+  
+  
+  
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Register</button>
+        </div>
+  
+        
+      </form>
+  
+    
+    </div>
+  </div>

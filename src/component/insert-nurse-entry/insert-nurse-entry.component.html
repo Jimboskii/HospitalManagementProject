@@ -1,0 +1,63 @@
+<div class="col-md-7; text-align: center">
+    <div class>
+        <p style = "font-size: 20px; text-align: center;">Inserting Nurse Entry</p>
+     <!--  
+       <img
+        id="profile-img"
+        src="src/assets/images/logo.png"
+        class="profile-img-card" 
+      />-->
+      
+      <form
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+  
+  
+  
+      <div class="form-group">
+        <label for="id">Entry Id</label>
+        <input
+          type="text"
+          class="form-control"
+          name="id"
+          [(ngModel)]="form.id"
+          #id="ngModel"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          name="drugName"
+          [(ngModel)]="form.description"
+          #description="ngModel"
+        />
+      </div>
+
+
+        <div class="form-group">
+            <label for="pat">Patient Id</label>
+            <input
+                type="text"
+                class="form-control"
+                name="pat"
+                [(ngModel)]="form.pat"
+                #pat="ngModel"
+            />
+        </div>
+
+  
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Register</button>
+        </div>
+  
+        
+      </form>
+  
+    </div>
+  </div>
